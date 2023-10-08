@@ -1,0 +1,34 @@
+const app = require('../app');
+const http = require('http');
+const port = parseInt(process.env.PORT) || 3000;
+const server = http.createServer(app);
+
+/**
+ * Error callback method
+ * @param error 
+ */
+const onError = (error) => {
+  switch (error.code) {
+    case 'EACCES':
+      console.error(`Port ${port} required elevated access`);
+      process.exit(1);
+    case 'EADDRINUSE':
+      console.error(`Port ${port} is already in use`);
+      process.exit(1);
+    default:
+      throw error;
+  }
+};
+
+/**
+ * Success callback method
+ * @param  
+ */
+const onSuccess = () => {
+  console.log(`App listening to port ${port}`);
+};
+
+server.listen(port, onSuccess);
+server.on('error', onError);
+
+
