@@ -1,5 +1,6 @@
 import { useState } from "react";
-import styles from "./DigitChooser.module.scss";
+import { STRINGS } from "../../utils/contants";
+import "./DigitChooser.scss";
 const DigitChooser = ({ onDigitsSelected }) => {
     const [digits, setDigits] = useState([
         { id: 0, label: '0', isChecked: false },
@@ -25,18 +26,24 @@ const DigitChooser = ({ onDigitsSelected }) => {
         setDigits(newDigits);
     };
 
-    return <div className={styles.digitChooser}>
-        <h3>Please select the digits</h3>
-        {digits.map((digit) => (
-            <label key={digit.id}>
-                <input
-                    type="checkbox"
-                    checked={digit.isChecked}
-                    onChange={() => handleDigitChange(digit.id)}
-                />
-                {digit.label}
-            </label>
-        ))}
+    return <div className="digit-chooser-container">
+        <h4>{STRINGS.CHOOSE_DIGITS}</h4>
+        <div className="digit-chooser">
+            {digits.map((digit) => (
+                <div key={digit.id}>
+                    <div>{digit.label}</div>
+                    <input
+                        type="checkbox"
+                        checked={digit.isChecked}
+                        onChange={() => handleDigitChange(digit.id)}
+                    />
+                </div>
+            ))}
+        </div>
+        <div className="divider">
+
+        </div>
+
     </div>;
 };
 

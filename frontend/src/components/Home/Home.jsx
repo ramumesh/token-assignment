@@ -1,11 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
-import "./Main.scss";
-const Main = () => {
+import "./Home.scss";
+import { STRINGS } from "../../utils/contants";
+const Home = () => {
     return <div className="main">
         <div className="d-flex justify-content-center align-items-center">
-            <h3>
-                Generate Tokens
-            </h3>
+            <h2>
+                {STRINGS.APP_MAIN_HEADER}
+            </h2>
         </div>
         <div className="nav">
             <NavLink className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')} to="/">
@@ -16,4 +17,4 @@ const Main = () => {
         <Outlet />
     </div>;
 };
-export default Main;
+export default Home;

@@ -1,8 +1,15 @@
-:root {
+html,
+body {
+  height: 100vh;
+  margin: 0px;
+}
+
+#root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  height: 100vh;
+  font-size: larger;
   color: black;
   background-color: white;
   font-synthesis: none;
@@ -24,4 +31,19 @@
 
 .justify-content-center {
   justify-content: center;
+}
+
+.app-button {
+  padding: 10px 20px;
+  min-width: 100px;
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+}
+
+.app-button:hover {
+  background-color: black;
+  color: white;
 }

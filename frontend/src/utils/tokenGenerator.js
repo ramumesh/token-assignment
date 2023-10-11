@@ -1,5 +1,6 @@
 import { TOKEN_LENGTH } from "./contants";
 
+
 export const generateToken = (digits) => {
     const min = 1;
     const max = digits.length;
@@ -17,3 +18,4 @@ export const generateToken = (digits) => {
     }
     return token;
 };
+

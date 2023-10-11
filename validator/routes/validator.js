@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/validate', function (req, res) {
+router.get('/', function (req, res) {
   const token = req.query.token;
   if (!token) {
     res.statusMessage = "BAD_REQUEST";
@@ -30,6 +30,8 @@ const validateToken = (token) => {
 
   let lastDigit = numbers.pop();
   const sum = numbers.reduce((total, current) => total + current, 0);
+  console.log(lastDigit);
+  console.log(10 - (sum % 10));
   return lastDigit === 10 - (sum % 10);
 };
 
