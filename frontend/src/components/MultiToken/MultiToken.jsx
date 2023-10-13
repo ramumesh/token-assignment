@@ -33,6 +33,8 @@ const MultiToken = () => {
         setDigits(digits);
     };
     const startGeneration = () => {
+        setTokenCount(0);
+        setValidTokens([]);
         setIsGenerating(true);
     };
     const stopGeneration = () => {

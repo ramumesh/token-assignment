@@ -14,7 +14,7 @@ export const STRINGS = {
     VALIDATE_TOKEN: "Validate token",
     DUMMY_VALIDATION_MESSAGE: "-------------",
     INVALID_TOKEN: "Token is not valid",
-    VALID_TOKEN: "Token is Valid",
+    VALID_TOKEN: "Valid Token",
     START_GENERATION: "Start Token Generation",
     STOP_GENERATION: "Stop Token Generation",
 };
