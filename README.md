@@ -2,7 +2,5 @@
 
 ## To run
 
-- mac
-  ./start.sh
-- windows
-  ./start.bat
+- MAC   "./start.sh" 
+- Windows  ".\start.bat" 
