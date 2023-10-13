@@ -5,7 +5,7 @@ const server = http.createServer(app);
 
 /**
  * Error callback method
- * @param error 
+ * @param error
  */
 const onError = (error) => {
   switch (error.code) {
@@ -22,7 +22,7 @@ const onError = (error) => {
 
 /**
  * Success callback method
- * @param  
+ * @param
  */
 const onSuccess = () => {
   console.log(`App listening to port ${port}`);
@@ -30,5 +30,3 @@ const onSuccess = () => {
 
 server.listen(port, onSuccess);
 server.on('error', onError);
-
-

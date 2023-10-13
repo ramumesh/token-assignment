@@ -1,19 +1,19 @@
 .single-token-container {
-    .generate-token {
-        margin: 20px;
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-    }
+  .generate-token {
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .message {
-        margin: 10px;
-    }
+  .message {
+    margin: 10px;
+  }
 }
