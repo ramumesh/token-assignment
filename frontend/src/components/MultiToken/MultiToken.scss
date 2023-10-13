@@ -1,0 +1,24 @@
+.multi-token-container {
+  text-align: center;
+
+  .token-container {
+    height: 350px;
+    overflow-y: scroll;
+
+    @media (max-width: 480px) {
+      height: 200px;
+    }
+  }
+
+  .token-statistics {
+    font-weight: bolder;
+    font-size: larger;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 20px;
+  }
+
+  button {
+    margin: 20px;
+  }
+}
