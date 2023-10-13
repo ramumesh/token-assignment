@@ -1,11 +1,11 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-let cors = require('cors');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const cors = require('cors');
 
-var validatorRouter = require('./routes/validator');
+const validatorRouter = require('./routes/validator');
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -15,19 +15,8 @@ app.use(cors());
 
 app.use('/validate', validatorRouter);
 
-app.get('*', (req, res) => {
+app.get('*', (_, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
-
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.json(err);
 });
 
 module.exports = app;

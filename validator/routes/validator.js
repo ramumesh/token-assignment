@@ -30,8 +30,6 @@ const validateToken = (token) => {
 
   let lastDigit = numbers.pop();
   const sum = numbers.reduce((total, current) => total + current, 0);
-  console.log(lastDigit);
-  console.log(10 - (sum % 10));
   return lastDigit === 10 - (sum % 10);
 };
 
